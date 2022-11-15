@@ -19,10 +19,6 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^1.0.4
 
-dependency_overrides:
-  better_cryptography:
-    path: ../better_cryptography
-
 flutter:
   plugin:
     platforms:
