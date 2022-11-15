@@ -1,4 +1,4 @@
-group 'dev.dint.cryptography_flutter'
+group 'tjcampanella.better_cryptography_flutter'
 version '1.0-SNAPSHOT'
 
 buildscript {

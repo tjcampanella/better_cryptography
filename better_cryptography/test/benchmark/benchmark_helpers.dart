@@ -37,7 +37,7 @@ abstract class SimpleBenchmark {
       watch.stop();
 
       n = (n * (1000000 / watch.elapsed.inMicroseconds)).ceil();
-      print('$_name:'.padRight(32, ' ') + ' $n op / second');
+      print('${'$_name:'.padRight(32, ' ')} $n op / second');
     } finally {
       await teardown();
     }

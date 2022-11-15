@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package dev.dint.cryptography_flutter
+package tjcampanella.better_cryptography_flutter
 
 import android.os.Build
 import androidx.annotation.RequiresApi

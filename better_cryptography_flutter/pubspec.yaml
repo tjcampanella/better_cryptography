@@ -10,7 +10,7 @@ environment:
   flutter: ">=2.5.0"
 
 dependencies:
-  better_cryptography: ^2.0.5
+  better_cryptography: ^1.0.0
   flutter:
     sdk: flutter
 
@@ -27,7 +27,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: dev.dint.cryptography_flutter
+        package: tjcampanella.better_cryptography_flutter
         pluginClass: CryptographyFlutterPlugin
       ios:
         pluginClass: CryptographyFlutterPlugin
