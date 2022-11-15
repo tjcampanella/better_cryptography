@@ -3,15 +3,15 @@
 # Run `pod lib lint cryptography_flutter.podspec' to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'cryptography_flutter'
+  s.name             = 'better_cryptography_flutter'
   s.version          = '0.1.0'
   s.summary          = 'A cryptography plugin for Flutter.'
   s.description      = <<-DESC
 A new flutter plugin project.
                        DESC
-  s.homepage         = 'http://github.com/dint-dev/cryptography'
+  s.homepage         = 'http://github.com/tjcampanella/better_cryptography'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Gohilla Ltd' => 'opensource@gohilla.com' }
+  s.author           = { 'TJ Campanella' => 'tjcampanella9@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'

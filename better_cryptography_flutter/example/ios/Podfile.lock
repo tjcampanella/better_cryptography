@@ -1,28 +1,28 @@
 PODS:
-  - cryptography_flutter (0.1.0):
+  - better_cryptography_flutter (0.1.0):
     - Flutter
   - Flutter (1.0.0)
   - integration_test (0.0.1):
     - Flutter
 
 DEPENDENCIES:
-  - cryptography_flutter (from `.symlinks/plugins/cryptography_flutter/ios`)
+  - better_cryptography_flutter (from `.symlinks/plugins/better_cryptography_flutter/ios`)
   - Flutter (from `Flutter`)
   - integration_test (from `.symlinks/plugins/integration_test/ios`)
 
 EXTERNAL SOURCES:
-  cryptography_flutter:
-    :path: ".symlinks/plugins/cryptography_flutter/ios"
+  better_cryptography_flutter:
+    :path: ".symlinks/plugins/better_cryptography_flutter/ios"
   Flutter:
     :path: Flutter
   integration_test:
     :path: ".symlinks/plugins/integration_test/ios"
 
 SPEC CHECKSUMS:
-  cryptography_flutter: a2c541ba25ff28549f989f856dde126c961defcd
-  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
-  integration_test: 5ed24a436eb7ec17b6a13046e9bf7ca4a404e59e
+  better_cryptography_flutter: d42b0d0b10f6c27df13e08e1ff0c3dd15fbd5bf0
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  integration_test: a1e7d09bd98eca2fc37aefd79d4f41ad37bdbbe5
 
-PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+PODFILE CHECKSUM: 7368163408c647b7eb699d0d788ba6718e18fb8d
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.3

@@ -15,7 +15,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-const MethodChannel channel = MethodChannel('cryptography_flutter');
+const MethodChannel channel = MethodChannel('better_cryptography_flutter');
 
 Future<Map> invokeMethod(String name, Map<String, Object> arguments) async {
   final result = await channel.invokeMethod(name, arguments);

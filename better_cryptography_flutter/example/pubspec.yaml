@@ -23,8 +23,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
-dependency_overrides:
-  crypto: ^3.0.0
-  better_cryptography:
-    path: ../../better_cryptography
