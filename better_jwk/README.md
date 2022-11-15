@@ -1,17 +1,17 @@
-[![Pub Package](https://img.shields.io/pub/v/jwk.svg)](https://pub.dev/packages/jwk)
-[![Github Actions CI](https://github.com/dint-dev/cryptography/workflows/Dart%20CI/badge.svg)](https://github.com/dint-dev/cryptography/actions?query=workflow%3A%22Dart+CI%22)
+[![Pub Package](https://img.shields.io/pub/v/better_jwk.svg)](https://pub.dev/packages/better_jwk)
+[![Github Actions CI](https://github.com/tjcampanella/better_cryptography/workflows/Dart%20CI/badge.svg)](https://github.com/tjcampanella/better_cryptography/actions?query=workflow%3A%22Dart+CI%22)
 
 # Overview
 JWK (JSON Web Key) encoding and decoding. Designed to be used with
-[package:cryptography](https://pub.dev/packages/cryptography).
+[package:cryptography](https://pub.dev/packages/better_cryptography).
 
 Maintained by Gohilla Ltd. Licensed under the [Apache License 2.0](LICENSE).
 
 # Examples
 ## Encoding KeyPair
 ```dart
-import 'package:cryptography/cryptography.dart';
-import 'package:jwk/jwk.dart';
+import 'package:cryptography/better_cryptography.dart';
+import 'package:jwk/better_jwk.dart';
 
 void main() {
   final keyPair = RsaKeyPairGenerator().newKeyPair();
@@ -22,7 +22,7 @@ void main() {
 
 ## Decoding SecretKey
 ```dart
-import 'package:jwk/jwk.dart';
+import 'package:jwk/better_jwk.dart';
 
 void main() {
   final jwk = Jwk.fromJson({
