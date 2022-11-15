@@ -3,7 +3,7 @@
 
 # Overview
 JWK (JSON Web Key) encoding and decoding. Designed to be used with
-[package:cryptography](https://pub.dev/packages/better_cryptography).
+[package:better_cryptography](https://pub.dev/packages/better_cryptography).
 
 Maintained by Gohilla Ltd. Licensed under the [Apache License 2.0](LICENSE).
 

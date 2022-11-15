@@ -3,7 +3,7 @@
 
 # Overview
 
-This is a version of the package [cryptography](https://pub.dev/packages/better_cryptography) that
+This is a version of the package [better_cryptography](https://pub.dev/packages/better_cryptography) that
 optimizes performance of some cryptographic algorithms by using native APIs of Android, iOS, and
 Mac OS X. You must use asynchronous methods to get the performance boost.
 
