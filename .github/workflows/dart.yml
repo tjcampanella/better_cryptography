@@ -5,25 +5,29 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        sdk: [2.17.0, stable]
+        runs-on: ${{ matrix.os }}
+        steps:
+          - uses: actions/checkout@v2
+          - uses: dart-lang/setup-dart@v1
+            with:
+              sdk: ${{ matrix.sdk }}
 
-    container:
-      image: google/dart:latest
+          - name: Install dependencies (better_cryptography)
+            working-directory: better_cryptography
+            run: dart pub get
 
-    steps:
-      - uses: actions/checkout@v1
+          - name: Install dependencies (better_jwk)
+            working-directory: better_jwk
+            run: dart pub get
 
-      - name: Install dependencies (better_cryptography)
-        working-directory: better_cryptography
-        run: dart pub get
+          - name: Run tests (better_cryptography)
+            working-directory: better_cryptography
+            run: dart test --platform=vm
 
-      - name: Install dependencies (better_jwk)
-        working-directory: better_jwk
-        run: dart pub get
-
-      - name: Run tests (better_cryptography)
-        working-directory: better_cryptography
-        run: dart test --platform=vm
-
-      - name: Run tests (better_jwk)
-        working-directory: better_jwk
-        run: dart test --platform=vm
+          - name: Run tests (better_jwk)
+            working-directory: better_jwk
+            run: dart test --platform=vm

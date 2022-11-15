@@ -1,4 +1,6 @@
 ## 1.0.0
 
 * Initial fork of package
-* Fix missing return statement in cipher.dart
+* Added missing return statement in cipher.dart
+* Bumped min sdk version to 2.17.
+* Bumped dependencies to latest.
