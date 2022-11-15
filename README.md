@@ -15,7 +15,7 @@ Maintained by Gohilla Ltd. Licensed under the [Apache License 2.0](LICENSE).
     * Contains cryptography implementations that use Web Cryptography API in browsers.
   * [better_cryptography_flutter](better_cryptography_flutter)
     * Contains cryptography implementations that use Android / iOS APIs.
-  * [jwk](jwk)
+  * [better_jwk](better_jwk)
     * JWK (JSON Web Key) encoding / decoding.
 
 ## Contributing
