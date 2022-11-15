@@ -1,10 +1,9 @@
 name: Dart CI
 
-on: [ push ]
+on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     container:
@@ -13,18 +12,18 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Install dependencies (cryptography)
-        working-directory: cryptography
+      - name: Install dependencies (better_cryptography)
+        working-directory: better_cryptography
         run: dart pub get
 
-      - name: Install dependencies (jwk)
-        working-directory: jwk
+      - name: Install dependencies (better_jwk)
+        working-directory: better_jwk
         run: dart pub get
 
-      - name: Run tests (cryptography)
-        working-directory: cryptography
+      - name: Run tests (better_cryptography)
+        working-directory: better_cryptography
         run: dart test --platform=vm
 
-      - name: Run tests (jwk)
-        working-directory: jwk
+      - name: Run tests (better_jwk)
+        working-directory: better_jwk
         run: dart test --platform=vm

@@ -1,0 +1,75 @@
+// Copyright 2019-2020 Gohilla Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+import 'dart:typed_data';
+
+import 'package:better_cryptography/better_cryptography.dart';
+import 'package:test/test.dart';
+
+void main() {
+  group('SecretKey:', () {
+    SecretKey f(List<int> value) => SecretKey(
+          value,
+        );
+
+    test('"==" / hashCode', () {
+      final value = f([3, 1, 4]);
+      final clone = f([3, 1, 4]);
+      final other0 = f([3, 1, 999]);
+      final other1 = f([3, 1, 4, 999]);
+
+      expect(value, clone);
+      expect(value, isNot(other0));
+      expect(value, isNot(other1));
+
+      expect(value.hashCode, clone.hashCode);
+      expect(value.hashCode, isNot(other0.hashCode));
+      expect(value.hashCode, isNot(other1.hashCode));
+    });
+
+    test('toString() does not expose actual bytes', () {
+      final a = f([0, 0, 0]);
+      expect(a, isNot(contains('0')));
+    });
+  });
+
+  group('SecretKeyData:', () {
+    test('SecretKeyData.random()', () {
+      final a = SecretKeyData.random(length: 32);
+      final b = SecretKeyData.random(length: 32);
+      expect(a, isNot(b));
+      expect(a.hashCode, isNot(b.hashCode));
+    });
+
+    test('"==" / hashCode', () {
+      final value = SecretKey(Uint8List.fromList([3, 1, 4]));
+      final clone = SecretKey(Uint8List.fromList([3, 1, 4]));
+      final other0 = SecretKey(Uint8List.fromList([3, 1, 999]));
+      final other1 = SecretKey(Uint8List.fromList([3, 1, 4, 999]));
+
+      expect(value, clone);
+      expect(value, isNot(other0));
+      expect(value, isNot(other1));
+
+      expect(value.hashCode, clone.hashCode);
+      expect(value.hashCode, isNot(other0.hashCode));
+      expect(value.hashCode, isNot(other1.hashCode));
+    });
+
+    test('toString()', () {
+      final a = SecretKey([0, 0, 0]);
+      expect(a.toString(), 'SecretKeyData(...)');
+    });
+  });
+}

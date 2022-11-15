@@ -1,0 +1,19 @@
+name: better_jwk
+version: 0.1.1
+homepage: https://github.com/tjcampanella/better_cryptography
+description: JWK (JSON Web Key) encoding and decoding (for package:better_cryptography).
+
+environment:
+  sdk: ">=2.14.0 <3.0.0"
+
+dependencies:
+  collection: ^1.15.0
+  better_cryptography: ^2.0.5
+
+dev_dependencies:
+  lints: ^1.0.1
+  test: ^1.19.0
+
+dependency_overrides:
+  better_cryptography:
+    path: ../better_cryptography
