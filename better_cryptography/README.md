@@ -5,7 +5,7 @@
 Popular cryptographic algorithms for [Dart](https://dart.dev) / [Flutter](https://flutter.dev)
 developers.
 
-Maintained by Gohilla Ltd. Licensed under the [Apache License 2.0](LICENSE).
+Licensed under the [Apache License 2.0](LICENSE).
 
 This package is:
   * __Easy to use__. The API is easy to understand and encourages good defaults.

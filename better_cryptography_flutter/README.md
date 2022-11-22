@@ -7,7 +7,7 @@ This is a version of the package [better_cryptography](https://pub.dev/packages/
 optimizes performance of some cryptographic algorithms by using native APIs of Android, iOS, and
 Mac OS X. You must use asynchronous methods to get the performance boost.
 
-Maintained by Gohilla Ltd. Licensed under the [Apache License 2.0](LICENSE).
+Licensed under the [Apache License 2.0](LICENSE).
 
 ## Optimized algorithms
 ### In Android

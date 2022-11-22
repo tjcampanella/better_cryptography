@@ -1,6 +1,15 @@
 name: Dart CI
 
-on: [push]
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.json"
+      - "**.md"
+      - "**.yaml"
+      - "makefile"
+  pull_request:
+    branches: [main]
 
 jobs:
   build:
