@@ -41,7 +41,7 @@ class CryptographyFlutterPlugin : FlutterPlugin, MethodCallHandler {
     private lateinit var channel: MethodChannel
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "cryptography_flutter")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "better_cryptography_flutter")
         channel.setMethodCallHandler(this)
     }
 
